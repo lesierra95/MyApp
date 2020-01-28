@@ -8,20 +8,24 @@ Planets:
 <h1>{{name}}</h1>
 
 <h1>Count: {{dFilms?.count}}</h1>
-<ul>
-    <li *ngFor="let result of dFilms?.results">
-        <h2>{{result.title}}</h2>
-        <ul>
-            <li *ngFor="let character of result.characters">
-                <a href="{{character}}">People</a>
-            </li>
-            <li *ngFor="let planets of result.planets">
-                <a href="{{planets}}">Planets</a>
-            </li>
-            <li *ngFor="let species of result.species">
-                <a href="{{species}}">Species</a>
-            </li>
-        </ul>
 
-    </li>
-</ul>
+
+<div>
+    <ul>
+        <li *ngFor="let result of dFilms?.results">
+            <h2>{{result.title}}</h2>
+            <ul>
+                <li *ngFor="let character of result.characters">
+                    <a href="{{character}}">People</a>
+                </li>
+                <li *ngFor="let planets of result.planets">
+                    <a href="{{planets}}">Planets</a>
+                </li>
+                <li *ngFor="let species of result.species">
+                    <a href="{{species}}">Species</a>
+                </li>
+            </ul>
+
+        </li>
+    </ul>
+</div>

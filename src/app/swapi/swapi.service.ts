@@ -7,18 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class SwapiService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpclient:HttpClient) { }
 
   getApis(): Observable<any>{
-    return this.http.get("https://swapi.co/api/");
+    return this.httpclient.get("https://swapi.co/api/");
   }
   getFilms(): Observable<any>{
-    return this.http.get("https://swapi.co/api/films/");
+    return this.httpclient.get("https://swapi.co/api/films/");
   }
   getPeoples(): Observable<any>{
-    return this.http.get("https://swapi.co/api/people/");
+    return this.httpclient.get("https://swapi.co/api/people/");
   }
   getSpecies(): Observable<any>{
-    return this.http.get("https://swapi.co/api/species/");
+    return this.httpclient.get("https://swapi.co/api/species/");
   }
 }

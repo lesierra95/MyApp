@@ -1,0 +1,23 @@
+<h1>People</h1>
+
+<h2>Count: {{dPeople?.count}}</h2>
+
+
+<div>
+    <ul>
+        <li *ngFor="let result of dPeople?.results">
+            <h3>Descripcion general</h3>
+            <ul>
+                <li>Nombre: {{result.name}}</li>
+                <li>Altura: {{result.height}}</li>
+                <li>Peso: {{result.mass}}</li>
+                <li>Color de cabello: {{result.hair_color}}</li>
+                <li>Color de piel: {{result.skin_color}}</li>
+                <li>Fecha de nacimiento: {{result.birth_year}}</li>
+                <li>Genero: {{result.gender}}</li>
+                <li>Si desea conocer el planeta donde vive ingrese al siguiente link: <a href="{{result.homeworld}}">Planeta</a></li>
+            </ul>
+        </li>
+        <hr>
+    </ul>
+</div>

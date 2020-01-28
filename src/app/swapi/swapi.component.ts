@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwapiService } from './swapi.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-swapi',
@@ -8,12 +9,13 @@ import { SwapiService } from './swapi.service';
 })
 export class SwapiComponent implements OnInit {
 
+  
   constructor(private _swpiService: SwapiService) { }
 
-  dApis:Object;
-  dFilms:Object;
-  dPeoples:object;
-  dSpecies:object
+  dApis:Observable <any>;
+  dFilms:Observable <any>;
+  dPeoples:Observable <any>;
+  dSpecies:Observable <any>;
 
   ngOnInit() {
     this._swpiService.getApis().subscribe(
