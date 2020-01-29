@@ -1,1 +1,22 @@
-<p>starships works!</p>
+<h1>Starships</h1>
+
+<h2>Count: {{dStarships?.count}}</h2>
+
+
+<div>
+    <ul>
+        <li *ngFor="let result of dStarships?.results">
+            <h3> Clases de naves</h3>
+            <ul>
+                <li>Nombre: {{result.name}}</li>
+                <li>Pasageros: {{result.passengers}}</li>
+                <li>Conbustible: {{result.consumables}}</li>
+                <li>Modelo: {{result.model}}</li>
+                <li>Fabricador: {{result.manufacturer}}</li>
+                <li>Clase de Nave: {{result.starship_class}}</li>
+                <li>Si desea conocer mas informacion sobre las naves ingrese al siguiente link: <a href="{{result.homeworld}}">Naves</a></li>
+            </ul>
+        </li>
+        <hr>
+    </ul>
+</div>

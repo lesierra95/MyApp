@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from '../services/main.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-species',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpeciesComponent implements OnInit {
 
-  constructor() { }
+  dSpecies: Observable <any>
+
+  constructor(private _film_Service: MainService) { }
 
   ngOnInit() {
-  }
+    
+    this._film_Service.getSpecies().subscribe(
+      data=>
+      {
+        this.dSpecies = data;
+      }
+    )
 
+}
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
@@ -29,9 +29,28 @@ export class MainService {
   getPeople(): Observable<any>{
     return this.http.get(environment.URL + "people/")
   }
-  
+
   // /people/:id/ -- get a specific people resource
   // /people/schema/ -- view the JSON schema for this resource
 
+  //planet/ ---
+  getPlanents(): Observable<any>{
+    return this.http.get(environment.URL + "planents/")
+  }
+
+   //species/ ---
+   getSpecies(): Observable<any>{
+    return this.http.get(environment.URL + "species/")
+  }
+  //starships/ ---
+  getStarships(): Observable<any>{
+  return this.http.get(environment.URL + "starships/")
+
+  }
+  //vehicles/ ---
+  getVehicles(): Observable<any>{
+    return this.http.get(environment.URL + "vehicles/")
 
 }
+}
+

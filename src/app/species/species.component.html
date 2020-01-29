@@ -1,1 +1,22 @@
-<p>species works!</p>
+<h1>Species</h1>
+
+<h2>Count: {{dSpecies?.count}}</h2>
+
+
+<div>
+    <ul>
+        <li *ngFor="let result of dSpecies?.results">
+            <h3>Tipo de especies</h3>
+            <ul>
+                <li>Nombre: {{result.name}}</li>
+                <li>Clasificacion: {{result.classification}}</li>
+                <li>Asignacion: {{result.designation}}</li>
+                <li>Color de ojos: {{result.eye_colors}}</li>
+                <li>Color de pelo: {{result.hair_colors}}</li>
+                <li>Idioma: {{result.language}}</li>
+                <li>Si desea conocer mas informacion de las especies ingrese al siguiente link: <a href="{{result.url}}">Especies</a></li>
+            </ul>
+        </li>
+        <hr>
+    </ul>
+</div>

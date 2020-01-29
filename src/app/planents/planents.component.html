@@ -1,0 +1,24 @@
+<h1>Planents</h1>
+
+<h2>Count: {{dPlanents?.Count}} </h2>
+
+
+<div>
+
+    <ul>
+        <li *ngFor="let result of dPlanents?.results">
+            <h3>Descripcion general de los planetas</h3>
+            <ul>
+                <li>Nombre: {{result.name}}</li>
+                <li>Diametro: {{result.diameter}}</li>
+                <li>Gravedad: {{result.gravity}}</li>
+                <li>climate: {{result.climate}}</li>
+                <li>Poblacion: {{result.population}}</li>
+                <li>Tereno: {{result.terrain}}</li>
+                <li>Periodo de Rotacion: {{result.rotation_period}}</li>
+                <li>Si desea conocer mas informacion sobre el planeta ingrese al siguiente link: <a href="{{result.url}}">Planeta</a></li>
+            </ul>
+
+        </li>
+    </ul>
+</div>

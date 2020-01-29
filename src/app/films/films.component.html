@@ -7,10 +7,13 @@
 <div>
     <ul>
         <li *ngFor="let result of dFilms?.results">
-            <h2>Titulo: {{result.title}}</h2>
-            <h2>El detalle de la pelicula lo puede encontrar en el siguiente link</h2>
-            <a href="{{ result.url }}">Descripcion</a>
-            <p>El productor de la pelicula es: {{ result.producer }}</p>
+            <h3>Descripcion general de las peliculas</h3>
+            <ul>
+                <li>Titulo: {{result.title}}</li>
+                <li>El productor de la pelicula es: {{ result.producer }}</li>
+                <li>El detalle de la pelicula lo puede encontrar en el siguiente link: <a href="{{ result.url }}">Descripcion</a></li>
+
+            </ul>
         </li>
         <hr>
     </ul>
