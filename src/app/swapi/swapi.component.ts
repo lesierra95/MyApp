@@ -8,43 +8,35 @@ import { Observable } from 'rxjs';
   styleUrls: ['./swapi.component.scss']
 })
 export class SwapiComponent implements OnInit {
+  constructor(private swApiService: SwapiService) { }
 
-  
-  constructor(private _swpiService: SwapiService) { }
-
-  dApis:Observable <any>;
-  dFilms:Observable <any>;
-  dPeoples:Observable <any>;
-  dSpecies:Observable <any>;
+  dApis: Observable <any>;
+  dFilms: Observable <any>;
+  dPeoples: Observable <any>;
+  dSpecies: Observable <any>;
 
   ngOnInit() {
-    this._swpiService.getApis().subscribe(
-      data=>
-      {
+    this.swApiService.getApis().subscribe(
+      data => {
         this.dApis = data;
       }
-    )
-    this._swpiService.getFilms().subscribe(
-      data=>
-      {
+    );
+    this.swApiService.getFilms().subscribe(
+      data => {
         this.dFilms = data;
       }
-    )
-    this._swpiService.getPeoples().subscribe(
-      data=>
-      {
+    );
+    this.swApiService.getPeoples().subscribe(
+      data => {
         this.dPeoples = data;
       }
-    )
-    this._swpiService.getSpecies().subscribe(
-      data=>
-      {
+    );
+    this.swApiService.getSpecies().subscribe(
+      data => {
         this.dSpecies = data;
       }
     )
 
   };
-  
-  name = "Leidy";
 
 }

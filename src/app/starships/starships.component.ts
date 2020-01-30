@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { MainService } from '../services/main.service';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {MainService} from '../services/main.service';
 
 
 @Component({
@@ -10,17 +10,17 @@ import { MainService } from '../services/main.service';
 })
 export class StarshipsComponent implements OnInit {
 
-  dStarships: Observable <any>
+  dStarships: Observable<any>
 
-  constructor(private _film_Service: MainService) { }
+  constructor(private starShipsService: MainService) {
+  }
 
   ngOnInit() {
-    this._film_Service.getStarships().subscribe(
-      data=>
-      {
+    this.starShipsService.getStarships().subscribe(
+      data => {
         this.dStarships = data;
       }
-    )
+    );
   }
 
 }

@@ -9,20 +9,19 @@ import { Observable } from 'rxjs';
 })
 export class FilmsComponent implements OnInit {
 
-  dFilms: Observable <any>
-  dFilmById: Observable <any>
-  dSchema: Observable <any>
+  dFilms: Observable <any>;
+  dFilmById: Observable <any>;
+  dSchema: Observable <any>;
 
-  constructor(private _film_Service: MainService) { }
+  constructor(private filmService: MainService) { }
 
   ngOnInit() {
-    
-    this._film_Service.getFilms().subscribe(
-      data=>
-      {
+    this.filmService.getFilms().subscribe(
+      data =>
+       {
         this.dFilms = data;
       }
-    )
+    );
 
 //    this._film_Service.getFilmById(dFilmById).subscribe(
 //      data=>

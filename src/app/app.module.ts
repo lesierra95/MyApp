@@ -11,7 +11,7 @@ import { PeopleComponent } from './people/people.component';
 import { StarshipsComponent } from './starships/starships.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { SpeciesComponent } from './species/species.component';
-import { PlanentsComponent } from './planents/planents.component';
+import { PlanetsComponent } from './planents/planets.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { PlanentsComponent } from './planents/planents.component';
     StarshipsComponent,
     VehiclesComponent,
     SpeciesComponent,
-    PlanentsComponent
+    PlanetsComponent
   ],
   imports: [
     BrowserModule,

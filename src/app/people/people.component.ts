@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { MainService } from '../services/main.service';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {MainService} from '../services/main.service';
 
 @Component({
   selector: 'app-people',
@@ -8,18 +8,18 @@ import { MainService } from '../services/main.service';
   styleUrls: ['./people.component.scss']
 })
 export class PeopleComponent implements OnInit {
-  
-  dPeople: Observable <any>
 
-  constructor(private _film_Service: MainService) { }
+  dPeople: Observable<any>;
+
+  constructor(private peopleService: MainService) {
+  }
 
   ngOnInit() {
-    this._film_Service.getPeople().subscribe(
-      data=>
-      {
+    this.peopleService.getPeople().subscribe(
+      data => {
         this.dPeople = data;
       }
-    )
+    );
   }
 
 }
