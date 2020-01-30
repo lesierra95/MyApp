@@ -1,31 +1,10 @@
-<div>
-    <h1>{{ title }} app is running!</h1>
-
-</div>
-
-<app-planets></app-planets>
-
-<!--
-<app-films></app-films>
--->
-
-<!--
-<app-swapi></app-swapi>
--->
-<hr>
-<hr>
-
-<!--<app-people></app-people>
-<hr>
-<hr>
-<app-planents></app-planents>
-<hr>
-<hr>
-<app-species></app-species>
-<hr>
-<hr>
-<app-starships></app-starships>
-<hr>
-<hr>
-<app-vehicles></app-vehicles>
--->
+<h1>Angular Router</h1>
+<nav>
+    <a routerLink="/films" routerLinkActive="active">Films</a>
+    <a routerLink="/people" routerLinkActive="active">People</a>
+    <a routerLink="/planets" routerLinkActive="active">Planets</a>
+    <a routerLink="/species" routerLinkActive="active">Species</a>
+    <a routerLink="/vehicles" routerLinkActive="active">Vehicles</a>
+    <a routerLink="/starships" routerLinkActive="active">Starships</a>
+</nav>
+<router-outlet></router-outlet>
