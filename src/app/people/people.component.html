@@ -3,6 +3,21 @@
 <h2>Count: {{dPeople?.count}}</h2>
 
 
+<div class="container">
+    <div class="row">
+        <div *ngFor="let result of dPeople?.results" class="card col-sm-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Nombre: {{result.name}}</h5>
+                <p class="card-text">Altura: {{result.height}}</p>
+                <p class="card-text">Productor: {{ result.producer }}</p>
+                <p class="card-text">Productor: {{ result.producer }}</p>
+                <p class="card-text">Productor: {{ result.producer }}</p>
+                <a href="{{result.homeworld}}" class="btn btn-primary">Detalle de la vivienda</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div>
     <ul>
         <li *ngFor="let result of dPeople?.results">

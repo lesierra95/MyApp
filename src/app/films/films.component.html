@@ -1,20 +1,14 @@
 <h1>Films</h1>
-
-
 <h2>Count: {{dFilms?.count}}</h2>
 
-
-<div>
-    <ul>
-        <li *ngFor="let result of dFilms?.results">
-            <h3>Descripcion general de las peliculas</h3>
-            <ul>
-                <li>Titulo: {{result.title}}</li>
-                <li>El productor de la pelicula es: {{ result.producer }}</li>
-                <li>El detalle de la pelicula lo puede encontrar en el siguiente link: <a href="{{ result.url }}">Descripcion</a></li>
-
-            </ul>
-        </li>
-        <hr>
-    </ul>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let result of dFilms?.results" class="card col-sm-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Titulo: {{result.title}}</h5>
+                <p class="card-text">Productor: {{ result.producer }}</p>
+                <a href="{{ result.url }}" class="btn btn-primary">Detalle de la pelicula</a>
+            </div>
+        </div>
+    </div>
 </div>
