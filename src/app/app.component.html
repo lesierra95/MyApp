@@ -1,10 +1,16 @@
 <h1>Angular Router</h1>
-<nav>
-    <a routerLink="/films" routerLinkActive="active">Films</a>
-    <a routerLink="/people" routerLinkActive="active">People</a>
-    <a routerLink="/planets" routerLinkActive="active">Planets</a>
-    <a routerLink="/species" routerLinkActive="active">Species</a>
-    <a routerLink="/vehicles" routerLinkActive="active">Vehicles</a>
-    <a routerLink="/starships" routerLinkActive="active">Starships</a>
-</nav>
+<div>
+    <div class="row">
+        <div class="col-3">
+            <div class="nav flex-column nav-pills" id="v-pills" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home" data-toggle="pill" routerLink="/films" aria-controls="v-pills-home" aria-selected="true">Films</a>
+                <a class="nav-link" id="v-pills-profile" data-toggle="pill" routerLink="/people" aria-controls="v-pills-profile" aria-selected="false">People</a>
+                <a class="nav-link" id="v-pills-messages" data-toggle="pill" routerLink="/planets" aria-controls="v-pills-messages" aria-selected="false">Planets</a>
+                <a class="nav-link" id="v-pills-settings" data-toggle="pill" routerLink="/species" aria-controls="v-pills-settings" aria-selected="false">Species</a>
+                <a class="nav-link" id="v-pills-messages" data-toggle="pill" routerLink="/starships" aria-controls="v-pills-messages" aria-selected="false">Starships</a>
+                <a class="nav-link" id="v-pills-settings" data-toggle="pill" routerLink="/vehicles" aria-controls="v-pills-settings" aria-selected="false">Vehicles</a>
+            </div>
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>

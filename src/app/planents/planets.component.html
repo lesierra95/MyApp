@@ -1,24 +1,24 @@
-<h1>Planets</h1>
+<div class="container">
 
-<h2>Count: {{dPlanets?.Count}} </h2>
+    <h1>Planets</h1>
+    <h2>Count: {{dPlanets?.Count}} </h2>
 
-
-<div>
-
-    <ul>
-        <li *ngFor="let result of dPlanets?.results">
-            <h3>Descripcion general de los planetas</h3>
-            <ul>
-                <li>Nombre: {{result.name}}</li>
-                <li>Diametro: {{result.diameter}}</li>
-                <li>Gravedad: {{result.gravity}}</li>
-                <li>climate: {{result.climate}}</li>
-                <li>Poblacion: {{result.population}}</li>
-                <li>Tereno: {{result.terrain}}</li>
-                <li>Periodo de Rotacion: {{result.rotation_period}}</li>
-                <li>Si desea conocer mas informacion sobre el planeta ingrese al siguiente link: <a href="{{result.url}}">Planeta</a></li>
-            </ul>
-
-        </li>
-    </ul>
+    <div class="row">
+        <div *ngFor="let result of dPlanets?.results" class="card border-dark col-sm-3" style="width: 18rem;">
+            <div class="card-header">
+                <h5>Nombre: {{result.name}}</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Diametro: {{result.diameter}}</p>
+                <p class="card-text">Gravedad: {{result.gravity}}</p>
+                <p class="card-text">Clima: {{result.climate}}</p>
+                <p class="card-text">Poblacion: {{result.population}}</p>
+                <p class="card-text">Tereno: {{result.terrain}}</p>
+                <p class="card-text">Periodo de Rotacion: {{result.rotation_period}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{result.url}}" class="btn btn-primary">Detalle del Planeta</a>
+            </div>
+        </div>
+    </div>
 </div>

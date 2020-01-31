@@ -1,23 +1,24 @@
-<h1>Vehicles</h1>
+<div class="container">
+    <h1>Vehicles</h1>
 
-<h2>Count: {{dVehicles?.count}}</h2>
+    <h2>Count: {{dVehicles?.count}}</h2>
 
-
-<div>
-    <ul>
-        <li *ngFor="let result of dVehicles?.results">
-            <h3>Tipo de vehiculos</h3>
-            <ul>
-                <li>Nombre: {{result.name}}</li>
-                <li>Clase de vehiculo: {{result.vehicle_class}}</li>
-                <li>Modelo: {{result.model}}</li>
-                <li>Fabricante: {{result.manufacturer}}</li>
-                <li>Capacidad de Carga: {{result.cargo_capacity}}</li>
-                <li>Conbustible: {{result.consumables}}</li>
-                <li>Pasageros: {{result.passengers}}</li>
-                <li>Si desea conocer mas informacion de los vehiculos ingrese al siguiente link: <a href="{{result.url}}">Vehiculos</a></li>
-            </ul>
-        </li>
-        <hr>
-    </ul>
+    <div class="row">
+        <div *ngFor="let result of dVehicles?.results" class="card border-dark col-sm-3" style="width: 18rem;">
+            <div class="card-header">
+                <h5>Nombre: {{result.name}}</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Clase de vehiculo: {{result.vehicle_class}}</p>
+                <p class="card-text">Modelo: {{result.model}}</p>
+                <p class="card-text">Fabricante: {{result.manufacturer}}</p>
+                <p class="card-text">Capacidad de Carga: {{result.cargo_capacity}}</p>
+                <p class="card-text">Conbustible: {{result.consumables}}</p>
+                <p class="card-text">Pasageros: {{result.passengers}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{result.url}}" class="btn btn-primary">Detalle del Vehiculo</a>
+            </div>
+        </div>
+    </div>
 </div>
