@@ -1,23 +1,20 @@
-<div class="container">
-    <h1>Starships</h1>
-
-    <h2>Count: {{dStarships?.count}}</h2>
-    <div class="row">
-        <div *ngFor="let result of dStarships?.results" class="card border-dark col-sm-3" style="width: 18rem;">
-            <div class="card-header">
-                <h5>Nombre: {{result.name}}</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Pasageros: {{result.passengers}}</p>
-                <p class="card-text">Conbustible: {{result.consumables}}</p>
-                <p class="card-text">Modelo: {{result.model}}</p>
-                <p class="card-text">Fabricador: {{result.manufacturer}}</p>
-                <p class="card-text">Clase de Nave: {{result.starship_class}}</p>
-
-            </div>
-            <div class="card-footer">
-                <a href="{{result.homeworld}}" class="btn btn-primary">Detalle de las Naves</a>
-            </div>
-        </div>
+<h1>Starships</h1>
+<h2>Count: {{dStarships?.count}}</h2>
+<div class="row">
+  <div *ngFor="let result of dStarships?.results" class="card border-dark col-sm-3" style="width: 18rem;">
+    <div class="card-header">
+      <h5>Nombre: {{result.name}}</h5>
     </div>
+    <div class="card-body">
+      <p class="card-text">Pasageros: {{result.passengers}}</p>
+      <p class="card-text">Conbustible: {{result.consumables}}</p>
+      <p class="card-text">Modelo: {{result.model}}</p>
+      <p class="card-text">Fabricador: {{result.manufacturer}}</p>
+      <p class="card-text">Clase de Nave: {{result.starship_class}}</p>
+
+    </div>
+    <div class="card-footer">
+      <a href="{{result.homeworld}}" class="btn btn-primary">Detalle de las Naves</a>
+    </div>
+  </div>
 </div>
