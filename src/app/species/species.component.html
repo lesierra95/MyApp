@@ -1,22 +1,20 @@
-<div class="container">
-    <h1>Species</h1>
+<h1>Species</h1>
 
-    <h2>Count: {{dSpecies?.count}}</h2>
-    <div class="row">
-        <div *ngFor="let result of dSpecies?.results" class="card border-dark col-sm-3" style="width: 18rem;">
-            <div class="card-header">
-                <h5>Nombre: {{result.name}}</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Clasificacion: {{result.classification}}</p>
-                <p class="card-text">Asignacion: {{result.designation}}</p>
-                <p class="card-text">Color de ojos: {{result.eye_colors}}</p>
-                <p class="card-text">Color de pelo: {{result.hair_colors}}</p>
-                <p class="card-text">Idioma: {{result.language}}</p>
-            </div>
-            <div class="card-footer">
-                <a href="{{result.url}}" class="btn btn-primary">Detalle del Especies</a>
-            </div>
-        </div>
+<h2>Count: {{dSpecies?.count}}</h2>
+<div class="row">
+  <div *ngFor="let result of dSpecies?.results" class="card border-dark col-sm-3" style="width: 18rem;">
+    <div class="card-header">
+      <h5>Nombre: {{result.name}}</h5>
     </div>
+    <div class="card-body">
+      <p class="card-text">Clasificacion: {{result.classification}}</p>
+      <p class="card-text">Asignacion: {{result.designation}}</p>
+      <p class="card-text">Color de ojos: {{result.eye_colors}}</p>
+      <p class="card-text">Color de pelo: {{result.hair_colors}}</p>
+      <p class="card-text">Idioma: {{result.language}}</p>
+    </div>
+    <div class="card-footer">
+      <a href="{{result.url}}" class="btn btn-primary">Detalle del Especies</a>
+    </div>
+  </div>
 </div>

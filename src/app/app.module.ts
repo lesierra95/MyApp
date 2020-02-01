@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SwapiComponent } from './swapi/swapi.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FilmsComponent } from './films/films.component';
 import { PeopleComponent } from './people/people.component';
@@ -16,7 +15,6 @@ import { PlanetsComponent } from './planents/planets.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SwapiComponent,
     FilmsComponent,
     PeopleComponent,
     StarshipsComponent,
