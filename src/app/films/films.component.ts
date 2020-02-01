@@ -38,13 +38,4 @@ export class FilmsComponent implements OnInit {
 
   }
 
-  Consultarinfo() {
-    this.filmService.getFilms().subscribe(
-      data => {
-        this.dFilms = data;
-      }
-    );
-          
-  }
-
 }
