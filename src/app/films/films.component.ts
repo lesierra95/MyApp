@@ -35,6 +35,16 @@ export class FilmsComponent implements OnInit {
 //        this.dSchema = data;
 //      }
 //    )
+
+  }
+
+  Consultarinfo() {
+    this.filmService.getFilms().subscribe(
+      data => {
+        this.dFilms = data;
+      }
+    );
+          
   }
 
 }

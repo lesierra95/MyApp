@@ -35,7 +35,7 @@ export class MainService {
   // /people/:id/ -- get a specific people resource
   // /people/schema/ -- view the JSON schema for this resource
   // planet/ ---
-  getPlanents(): Observable<any> {
+  getPlanets(): Observable<any> {
     return this.http.get(environment.URL + 'planets/');
   }
 
