@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container">
     <h1>Vehicles</h1>
     <h2>Count: {{dVehicles?.count}}</h2>
@@ -20,25 +19,5 @@
                 <a href="{{result.url}}" class="btn btn-primary">Detalle del Vehiculo</a>
             </div>
         </div>
-=======
-<h1>Vehicles</h1>
-<h2>Count: {{dVehicles?.count}}</h2>
-<div class="row">
-  <div *ngFor="let result of dVehicles?.results" class="card border-dark col-sm-3" style="width: 18rem;">
-    <div class="card-header">
-      <h5>Nombre: {{result.name}}</h5>
->>>>>>> 8b168e8ff5ed1acac50d89990f7a535de349471a
     </div>
-    <div class="card-body">
-      <p class="card-text">Clase de vehiculo: {{result.vehicle_class}}</p>
-      <p class="card-text">Modelo: {{result.model}}</p>
-      <p class="card-text">Fabricante: {{result.manufacturer}}</p>
-      <p class="card-text">Capacidad de Carga: {{result.cargo_capacity}}</p>
-      <p class="card-text">Conbustible: {{result.consumables}}</p>
-      <p class="card-text">Pasageros: {{result.passengers}}</p>
-    </div>
-    <div class="card-footer">
-      <a href="{{result.url}}" class="btn btn-primary">Detalle del Vehiculo</a>
-    </div>
-  </div>
 </div>
