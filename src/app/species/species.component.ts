@@ -11,15 +11,22 @@ export class SpeciesComponent implements OnInit {
 
   dSpecies: Observable<any>
 
-  constructor(private speciesService: MainService) {
+  constructor(private http: MainService) {
   }
 
   ngOnInit() {
-    this.speciesService.getSpecies().subscribe(
+    this.http.getSpecies().subscribe(
       data => {
         this.dSpecies = data;
       }
     );
-
+  }
+  
+  onClickSubmit(formData) {  
+    this.http.getSearch("species/?search=" + formData.query).subscribe(
+      data => {
+        this.dSpecies = data;
+      }
+    );
   }
 }

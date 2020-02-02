@@ -11,11 +11,19 @@ export class VehiclesComponent implements OnInit {
 
   dVehicles: Observable<any>
 
-  constructor(private vehiclesService: MainService) {
+  constructor(private http: MainService) {
   }
 
   ngOnInit() {
-    this.vehiclesService.getVehicles().subscribe(
+    this.http.getVehicles().subscribe(
+      data => {
+        this.dVehicles = data;
+      }
+    );
+  }
+  
+  onClickSubmit(formData) {  
+    this.http.getSearch("vehicles/?search=" + formData.query).subscribe(
       data => {
         this.dVehicles = data;
       }

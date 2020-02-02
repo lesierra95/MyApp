@@ -10,32 +10,23 @@ import { Observable } from 'rxjs';
 export class FilmsComponent implements OnInit {
 
   dFilms: Observable <any>;
-  dFilmById: Observable <any>;
-  dSchema: Observable <any>;
 
-  constructor(private filmService: MainService) { }
+  constructor(private http: MainService) { }
 
   ngOnInit() {
-    this.filmService.getFilms().subscribe(
+    this.http.getFilms().subscribe(
       data => {
         this.dFilms = data;
       }
     );
-
-//    this._film_Service.getFilmById(dFilmById).subscribe(
-//      data=>
-//      {
-//        this.dFilms = data;
-//      }
-//    )
-
-//    this._film_Service.getSchema().subscribe(
-//      data=>
-//      {
-//        this.dSchema = data;
-//      }
-//    )
-
+  }
+  
+  onClickSubmit(formData) {  
+    this.http.getSearch("films/?search=" + formData.query).subscribe(
+      data => {
+        this.dFilms = data;
+      }
+    );
   }
 
 }

@@ -17,6 +17,10 @@ export class MainService {
     return this.http.get(environment.URL + 'films/');
   }
 
+  getSearch(query): Observable <any> {
+    return this.http.get(environment.URL + query);
+  }
+
   // /films/:id/ -- get a specific film resource
   getFilmById(idFilm): Observable<any> {
     return this.http.get(environment.URL + 'films/' + idFilm + '/');
@@ -55,5 +59,6 @@ export class MainService {
     return this.http.get(environment.URL + 'vehicles/');
 
   }
+  
 }
 

@@ -11,11 +11,19 @@ export class PlanetsComponent implements OnInit {
 
   dPlanets: Observable<any>;
 
-  constructor(private planetsService: MainService) {
+  constructor(private http: MainService) {
   }
 
   ngOnInit() {
-    this.planetsService.getPlanets().subscribe(
+    this.http.getPlanets().subscribe(
+      data => {
+        this.dPlanets = data;
+      }
+    );
+  }
+  
+  onClickSubmit(formData) {  
+    this.http.getSearch("planets/?search=" + formData.query).subscribe(
       data => {
         this.dPlanets = data;
       }

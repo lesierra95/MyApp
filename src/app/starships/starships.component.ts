@@ -12,11 +12,19 @@ export class StarshipsComponent implements OnInit {
 
   dStarships: Observable<any>
 
-  constructor(private starShipsService: MainService) {
+  constructor(private http: MainService) {
   }
 
   ngOnInit() {
-    this.starShipsService.getStarships().subscribe(
+    this.http.getStarships().subscribe(
+      data => {
+        this.dStarships = data;
+      }
+    );
+  }
+  
+  onClickSubmit(formData) {  
+    this.http.getSearch("starships/?search=" + formData.query).subscribe(
       data => {
         this.dStarships = data;
       }

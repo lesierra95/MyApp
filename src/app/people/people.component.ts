@@ -11,11 +11,19 @@ export class PeopleComponent implements OnInit {
 
   dPeople: Observable<any>;
 
-  constructor(private peopleService: MainService) {
+  constructor(private http: MainService) {
   }
 
   ngOnInit() {
-    this.peopleService.getPeople().subscribe(
+    this.http.getPeople().subscribe(
+      data => {
+        this.dPeople = data;
+      }
+    );
+  }
+  
+  onClickSubmit(formData) {  
+    this.http.getSearch("people/?search=" + formData.query).subscribe(
       data => {
         this.dPeople = data;
       }

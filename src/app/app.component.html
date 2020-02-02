@@ -3,23 +3,14 @@
         <h1>Angular Router</h1>
         <div class="nav flex-column" aria-orientation="vertical">
             <button type="button" class="btn btn-outline-light" routerLink="/films" aria-selected="true ">Films</button>
-            <button type="button" class="btn btn-outline-light " routerLink="/people" aria-selected="false ">People</button>
-            <button type="button" class="btn btn-outline-light " routerLink="/planets" aria-selected="false ">Planets
-      </button>
-            <button type="button" class="btn btn-outline-light " routerLink="/species" aria-selected="false ">Species
-      </button>
-            <button type="button" class="btn btn-outline-light " routerLink="/starships" aria-selected="false ">Starships
-      </button>
-            <button type="button" class="btn btn-outline-light " routerLink="/vehicles" aria-selected="false ">Vehicles
-      </button>
-
+            <button type="button" class="btn btn-outline-light" routerLink="/people" aria-selected="false ">People</button>
+            <button type="button" class="btn btn-outline-light" routerLink="/planets" aria-selected="false ">Planets</button>
+            <button type="button" class="btn btn-outline-light" routerLink="/species" aria-selected="false ">Species</button>
+            <button type="button" class="btn btn-outline-light" routerLink="/starships" aria-selected="false ">Starships</button>
+            <button type="button" class="btn btn-outline-light" routerLink="/vehicles" aria-selected="false ">Vehicles</button>
         </div>
     </div>
     <main role="main " class="container">
-        <form class="form-inline my-2 my-lg-0 justify-content-end">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
         <router-outlet></router-outlet>
     </main>
 </div>
